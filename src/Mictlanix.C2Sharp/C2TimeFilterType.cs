@@ -28,16 +28,18 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace Mictlanix.C2Sharp {
-	[JsonConverter (typeof (StringEnumConverter))]
-	public enum C2TimeFilterType {
-		[EnumMember (Value = "time_posted")]
-		Posted,
-		[EnumMember (Value = "time_traded")]
-		Traded,
-		[EnumMember (Value = "time_expired")]
-		Expired,
-		[EnumMember (Value = "time_canceled")]
-		Canceled
-	}
+namespace Collective2
+{
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum C2TimeFilterType
+    {
+        [EnumMember(Value = "time_posted")]
+        Posted,
+        [EnumMember(Value = "time_traded")]
+        Traded,
+        [EnumMember(Value = "time_expired")]
+        Expired,
+        [EnumMember(Value = "time_canceled")]
+        Canceled
+    }
 }

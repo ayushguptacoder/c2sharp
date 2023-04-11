@@ -26,87 +26,89 @@
 
 using System;
 using Newtonsoft.Json;
-using Mictlanix.C2Sharp.Converters;
+using Collective2.Converters;
 
-namespace Mictlanix.C2Sharp {
-	public class C2RetrievalSignal {
-		[JsonProperty ("signal_id")]
-		public string Id { get; set; }
+namespace Collective2
+{
+    public class C2RetrievalSignal
+    {
+        [JsonProperty("signal_id")]
+        public string Id { get; set; }
 
-		[JsonProperty ("tif")]
-		public C2Duration TimeInForce { get; set; }
+        [JsonProperty("tif")]
+        public C2Duration TimeInForce { get; set; }
 
-		[JsonProperty ("action")]
-		public C2Action Action { get; set; }
+        [JsonProperty("action")]
+        public C2Action Action { get; set; }
 
-		[JsonProperty ("symbol")]
-		public string Symbol { get; set; }
+        [JsonProperty("symbol")]
+        public string Symbol { get; set; }
 
-		[JsonProperty ("name")]
-		public string SymbolDescription { get; set; }
+        [JsonProperty("name")]
+        public string SymbolDescription { get; set; }
 
-		[JsonProperty ("strike")]
-		public string Strike { get; set; }
+        [JsonProperty("strike")]
+        public string Strike { get; set; }
 
-		[JsonProperty ("status")]
-		public C2SignalStatus Status { get; set; }
+        [JsonProperty("status")]
+        public C2SignalStatus Status { get; set; }
 
-		[JsonProperty ("traded_time")]
-		public DateTime? TradedTime { get; set; }
+        [JsonProperty("traded_time")]
+        public DateTime? TradedTime { get; set; }
 
-		[JsonProperty ("traded_time_unix")]
-		public long TradedTimestamp { get; set; }
+        [JsonProperty("traded_time_unix")]
+        public long TradedTimestamp { get; set; }
 
-		[JsonProperty ("expired_time")]
-		[JsonConverter (typeof (DateTimeConverter))]
-		public DateTime? ExpiredTime { get; set; }
+        [JsonProperty("expired_time")]
+        [JsonConverter(typeof(DateTimeConverter))]
+        public DateTime? ExpiredTime { get; set; }
 
-		[JsonProperty ("expired_time_unix")]
-		public long ExpiredTimestamp { get; set; }
+        [JsonProperty("expired_time_unix")]
+        public long ExpiredTimestamp { get; set; }
 
-		[JsonProperty ("underlying")]
-		public string Underlying { get; set; }
+        [JsonProperty("underlying")]
+        public string Underlying { get; set; }
 
-		[JsonProperty ("isLimitOrder")]
-		public decimal LimitOrder { get; set; }
+        [JsonProperty("isLimitOrder")]
+        public decimal LimitOrder { get; set; }
 
-		[JsonProperty ("isMarketOrder")]
-		public decimal MarketOrder { get; set; }
+        [JsonProperty("isMarketOrder")]
+        public decimal MarketOrder { get; set; }
 
-		[JsonProperty ("isStopOrder")]
-		public decimal StopOrder { get; set; }
+        [JsonProperty("isStopOrder")]
+        public decimal StopOrder { get; set; }
 
-		[JsonProperty ("putcall")]
-		public string Putcall { get; set; }
+        [JsonProperty("putcall")]
+        public string Putcall { get; set; }
 
-		[JsonProperty ("expiration")]
-		public string Expiration { get; set; }
+        [JsonProperty("expiration")]
+        public string Expiration { get; set; }
 
-		[JsonProperty ("quant")]
-		public int Quantity { get; set; }
+        [JsonProperty("quant")]
+        public int Quantity { get; set; }
 
-		[JsonProperty ("canceled_time")]
-		public DateTime? CanceledTime { get; set; }
+        [JsonProperty("canceled_time")]
+        public DateTime? CanceledTime { get; set; }
 
-		[JsonProperty ("canceled_time_unix")]
-		public long CanceledTimestamp { get; set; }
+        [JsonProperty("canceled_time_unix")]
+        public long CanceledTimestamp { get; set; }
 
-		[JsonProperty ("instrument")]
-		public C2SymbolType Instrument { get; set; }
+        [JsonProperty("instrument")]
+        public C2SymbolType Instrument { get; set; }
 
-		[JsonProperty ("posted_time")]
-		public DateTime? PostedTime { get; set; }
+        [JsonProperty("posted_time")]
+        public DateTime? PostedTime { get; set; }
 
-		[JsonProperty ("posted_time_unix")]
-		public long PostedTimestamp { get; set; }
+        [JsonProperty("posted_time_unix")]
+        public long PostedTimestamp { get; set; }
 
-		[JsonProperty ("trade_id_opening")]
-		public string OpeningTradeId { get; set; }
+        [JsonProperty("trade_id_opening")]
+        public string OpeningTradeId { get; set; }
 
-		[JsonProperty ("trade_id_closing")]
-		public string ClosingTradeId { get; set; }
+        [JsonProperty("trade_id_closing")]
+        public string ClosingTradeId { get; set; }
 
-		[JsonProperty ("traded_price")]
-		public decimal? TradedPrice { get; set; }
-	}
+        [JsonProperty("traded_price")]
+        public decimal? TradedPrice { get; set; }
+    }
 }

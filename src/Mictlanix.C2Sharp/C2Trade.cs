@@ -27,72 +27,74 @@
 using System;
 using Newtonsoft.Json;
 
-namespace Mictlanix.C2Sharp {
-	public class C2Trade {
-		[JsonProperty ("trade_id")]
-		public string Id { get; set; }
+namespace Collective2
+{
+    public class C2Trade
+    {
+        [JsonProperty("trade_id")]
+        public string Id { get; set; }
 
-		[JsonProperty ("symbol")]
-		public string Symbol { get; set; }
+        [JsonProperty("symbol")]
+        public string Symbol { get; set; }
 
-		[JsonProperty ("symbol_description")]
-		public string SymbolDescription { get; set; }
+        [JsonProperty("symbol_description")]
+        public string SymbolDescription { get; set; }
 
-		[JsonProperty ("closeVWAP_timestamp")]
-		public long? CloseVWAPTimestamp { get; set; }
+        [JsonProperty("closeVWAP_timestamp")]
+        public long? CloseVWAPTimestamp { get; set; }
 
-		[JsonProperty ("strike")]
-		public string Strike { get; set; }
+        [JsonProperty("strike")]
+        public string Strike { get; set; }
 
-		[JsonProperty ("open_or_closed")]
-		public string OpenOrClosed { get; set; }
+        [JsonProperty("open_or_closed")]
+        public string OpenOrClosed { get; set; }
 
-		[JsonProperty ("expir")]
-		public string Expir { get; set; }
+        [JsonProperty("expir")]
+        public string Expir { get; set; }
 
-		[JsonProperty ("openVWAP_timestamp")]
-		public string OpenVWAPTimestamp { get; set; }
+        [JsonProperty("openVWAP_timestamp")]
+        public string OpenVWAPTimestamp { get; set; }
 
-		[JsonProperty ("underlying")]
-		public string Underlying { get; set; }
+        [JsonProperty("underlying")]
+        public string Underlying { get; set; }
 
-		[JsonProperty ("closing_price_VWAP")]
-		public decimal? ClosingPriceVWAP { get; set; }
+        [JsonProperty("closing_price_VWAP")]
+        public decimal? ClosingPriceVWAP { get; set; }
 
-		[JsonProperty ("putcall")]
-		public string Putcall { get; set; }
+        [JsonProperty("putcall")]
+        public string Putcall { get; set; }
 
-		[JsonProperty ("quant_closed")]
-		public int QuantityClosed { get; set; }
+        [JsonProperty("quant_closed")]
+        public int QuantityClosed { get; set; }
 
-		[JsonProperty ("markToMarket_time")]
-		public DateTime? MarkToMarketTime { get; set; }
+        [JsonProperty("markToMarket_time")]
+        public DateTime? MarkToMarketTime { get; set; }
 
-		[JsonProperty ("opening_price_VWAP")]
-		public decimal OpeningPriceVWAP { get; set; }
+        [JsonProperty("opening_price_VWAP")]
+        public decimal OpeningPriceVWAP { get; set; }
 
-		[JsonProperty ("quant_opened")]
-		public int QuantityOpened { get; set; }
+        [JsonProperty("quant_opened")]
+        public decimal QuantityOpened { get; set; }
 
-		[JsonProperty ("instrument")]
-		public C2SymbolType Instrument { get; set; }
+        [JsonProperty("instrument")]
+        public C2SymbolType Instrument { get; set; }
 
-		[JsonProperty ("ptValue")]
-		public string PtValue { get; set; }
+        [JsonProperty("ptValue")]
+        public string PtValue { get; set; }
 
-		[JsonProperty ("PL")]
-		public string PL { get; set; }
+        [JsonProperty("PL")]
+        public string PL { get; set; }
 
-		[JsonProperty ("closedWhen")]
-		public DateTime? ClosedWhen { get; set; }
+        [JsonProperty("closedWhen")]
+        public DateTime? ClosedWhen { get; set; }
 
-		[JsonProperty ("closedWhenUnixTimeStamp")]
-		public long? ClosedWhenTimestamp { get; set; }
+        [JsonProperty("closedWhenUnixTimeStamp")]
+        public long? ClosedWhenTimestamp { get; set; }
 
-		[JsonProperty ("openedWhen")]
-		public DateTime OpenedWhen { get; set; }
+        [JsonProperty("openedWhen")]
+        public DateTime OpenedWhen { get; set; }
 
-		[JsonProperty ("long_or_short")]
-		public string LongOrShort { get; set; }
-	}
+        [JsonProperty("long_or_short")]
+        public string LongOrShort { get; set; }
+    }
 }

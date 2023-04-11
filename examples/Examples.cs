@@ -2,10 +2,11 @@
 using System.Net;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Mictlanix.C2Sharp;
+using Collective2;
 
-namespace Examples {
-	class MainClass {
+namespace Examples
+{
+    class MainClass {
 		// C2's api server (api.collective2.com) uses Tls 1.2 but mono doesn't support it yet.
 		// A workaround is to use "collective2.com" domain instead of "api.collective2.com".
 #if __MonoCS__

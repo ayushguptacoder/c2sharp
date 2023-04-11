@@ -6,10 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\Mictlanix.C2Sharp\Mictlanix.C2Sharp.csproj" />
+    <ProjectReference Include="..\src\Mictlanix.C2Sharp\Collective2.csproj" />
   </ItemGroup>
 </Project>

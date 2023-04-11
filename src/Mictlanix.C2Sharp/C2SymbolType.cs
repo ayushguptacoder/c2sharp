@@ -28,16 +28,18 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace Mictlanix.C2Sharp {
-	[JsonConverter (typeof (StringEnumConverter))]
-	public enum C2SymbolType {
-		[EnumMember (Value = "stock")]
-		Stock,
-		[EnumMember (Value = "option")]
-		Option,
-		[EnumMember (Value = "future")]
-		Future,
-		[EnumMember (Value = "forex")]
-		Forex
-	}
+namespace Collective2
+{
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum C2SymbolType
+    {
+        [EnumMember(Value = "stock")]
+        Stock,
+        [EnumMember(Value = "option")]
+        Option,
+        [EnumMember(Value = "future")]
+        Future,
+        [EnumMember(Value = "forex")]
+        Forex
+    }
 }

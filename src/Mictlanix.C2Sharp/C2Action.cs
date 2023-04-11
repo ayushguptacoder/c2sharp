@@ -28,18 +28,20 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace Mictlanix.C2Sharp {
-	[JsonConverter (typeof (StringEnumConverter))]
-	public enum C2Action {
-		[EnumMember (Value = "BTO")]
-		BuyToOpen,
-		[EnumMember (Value = "STO")]
-		SellToOpen,
-		[EnumMember (Value = "SSHORT")]
-		SellShort,
-		[EnumMember (Value = "BTC")]
-		BuyToClose,
-		[EnumMember (Value = "STC")]
-		SellToClose
-	}
+namespace Collective2
+{
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum C2Action
+    {
+        [EnumMember(Value = "BTO")]
+        BuyToOpen,
+        [EnumMember(Value = "STO")]
+        SellToOpen,
+        [EnumMember(Value = "SSHORT")]
+        SellShort,
+        [EnumMember(Value = "BTC")]
+        BuyToClose,
+        [EnumMember(Value = "STC")]
+        SellToClose
+    }
 }

@@ -27,28 +27,31 @@
 using System;
 using Newtonsoft.Json;
 
-namespace Mictlanix.C2Sharp.Converters {
-	class DateTimeConverter : JsonConverter {
-		public override bool CanWrite { get { return false; } }
+namespace Collective2.Converters
+{
+    class DateTimeConverter : JsonConverter
+    {
+        public override bool CanWrite { get { return false; } }
 
-		public override void WriteJson (JsonWriter writer, object value, JsonSerializer serializer)
-		{
-		}
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+        }
 
-		public override object ReadJson (JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-		{
-			var str = string.Format ("{0}", reader.Value).Trim ();
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var str = string.Format("{0}", reader.Value).Trim();
 
-			if (string.IsNullOrEmpty (str) || str == "0") {
-				return null;
-			}
+            if (string.IsNullOrEmpty(str) || str == "0")
+            {
+                return null;
+            }
 
-			return DateTime.Parse (str);
-		}
+            return DateTime.Parse(str);
+        }
 
-		public override bool CanConvert (Type objectType)
-		{
-			return objectType == typeof (DateTime);
-		}
-	}
+        public override bool CanConvert(Type objectType)
+        {
+            return objectType == typeof(DateTime);
+        }
+    }
 }

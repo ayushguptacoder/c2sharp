@@ -26,24 +26,26 @@
 
 using System;
 
-namespace Mictlanix.C2Sharp {
-	public class C2Exception : Exception {
-		public string Title { get; private set; }
-		public C2RejectedSignal Signal { get; internal set; }
+namespace Collective2
+{
+    public class C2Exception : Exception
+    {
+        public string Title { get; private set; }
+        public C2RejectedSignal Signal { get; internal set; }
 
-		public C2Exception (string title, string message) : base (message)
-		{
-			Title = title;
-		}
+        public C2Exception(string title, string message) : base(message)
+        {
+            Title = title;
+        }
 
-		public C2Exception (string title, string message, Exception innerException) : base (message, innerException)
-		{
-			Title = title;
-		}
+        public C2Exception(string title, string message, Exception innerException) : base(message, innerException)
+        {
+            Title = title;
+        }
 
-		public override string ToString ()
-		{
-			return string.Format ("{0} ({1})", Title, Message);
-		}
-	}
+        public override string ToString()
+        {
+            return string.Format("{0} ({1})", Title, Message);
+        }
+    }
 }

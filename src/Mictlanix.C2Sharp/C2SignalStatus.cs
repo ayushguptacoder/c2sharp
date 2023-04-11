@@ -28,18 +28,20 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace Mictlanix.C2Sharp {
-	[JsonConverter (typeof (StringEnumConverter))]
-	public enum C2SignalStatus {
-		[EnumMember (Value = "posted")]
-		Posted,
-		[EnumMember (Value = "traded")]
-		Traded,
-		[EnumMember (Value = "expired")]
-		Expired,
-		[EnumMember (Value = "canceled")]
-		Canceled,
-		[EnumMember (Value = "working")]
-		Working
-	}
+namespace Collective2
+{
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum C2SignalStatus
+    {
+        [EnumMember(Value = "posted")]
+        Posted,
+        [EnumMember(Value = "traded")]
+        Traded,
+        [EnumMember(Value = "expired")]
+        Expired,
+        [EnumMember(Value = "canceled")]
+        Canceled,
+        [EnumMember(Value = "working")]
+        Working
+    }
 }

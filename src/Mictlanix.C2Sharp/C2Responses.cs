@@ -26,65 +26,70 @@
 
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using Mictlanix.C2Sharp.Converters;
+using Collective2.Converters;
 
-namespace Mictlanix.C2Sharp {
-	class C2Response<T> {
-		[JsonProperty ("ok")]
-		[JsonConverter (typeof (BoolConverter))]
-		public bool IsOK { get; set; }
+namespace Collective2
+{
+    class C2Response<T>
+    {
+        [JsonProperty("ok")]
+        [JsonConverter(typeof(BoolConverter))]
+        public bool IsOK { get; set; }
 
-		[JsonProperty ("response")]
-		public T Response { get; set; }
+        [JsonProperty("response")]
+        public T Response { get; set; }
 
-		[JsonProperty ("error")]
-		public C2Error Error { get; set; }
-	}
+        [JsonProperty("error")]
+        public C2Error Error { get; set; }
+    }
 
-	class C2CollectionResponse<T> {
-		[JsonProperty ("ok")]
-		[JsonConverter (typeof (BoolConverter))]
-		public bool IsOK { get; set; }
+    class C2CollectionResponse<T>
+    {
+        [JsonProperty("ok")]
+        [JsonConverter(typeof(BoolConverter))]
+        public bool IsOK { get; set; }
 
-		[JsonProperty ("response")]
-		public IEnumerable<T> Response { get; set; }
+        [JsonProperty("response")]
+        public IEnumerable<T> Response { get; set; }
 
-		[JsonProperty ("error")]
-		public C2Error Error { get; set; }
-	}
+        [JsonProperty("error")]
+        public C2Error Error { get; set; }
+    }
 
-	class C2SignalResponse {
-		[JsonProperty ("ok")]
-		[JsonConverter (typeof (BoolConverter))]
-		public bool IsOK { get; set; }
+    class C2SignalResponse
+    {
+        [JsonProperty("ok")]
+        [JsonConverter(typeof(BoolConverter))]
+        public bool IsOK { get; set; }
 
-		[JsonProperty ("signal")]
-		public C2Signal Signal { get; set; }
+        [JsonProperty("signal")]
+        public C2Signal Signal { get; set; }
 
-		[JsonProperty ("rejectedSignal")]
-		public C2RejectedSignal RejectedSignal { get; set; }
+        [JsonProperty("rejectedSignal")]
+        public C2RejectedSignal RejectedSignal { get; set; }
 
-		[JsonProperty ("signalid")]
-		public string SignalId { get; set; }
+        [JsonProperty("signalid")]
+        public string SignalId { get; set; }
 
-		[JsonProperty ("title")]
-		public string Title { get; set; }
+        [JsonProperty("title")]
+        public string Title { get; set; }
 
-		[JsonProperty ("elapsed_time")]
-		public string ElapsedTime { get; set; }
+        [JsonProperty("elapsed_time")]
+        public string ElapsedTime { get; set; }
 
-		[JsonProperty ("message")]
-		public string Message { get; set; }
+        [JsonProperty("message")]
+        public string Message { get; set; }
 
-		[JsonProperty ("error")]
-		public C2Error Error { get; set; }
-	}
+        [JsonProperty("error")]
+        public C2Error Error { get; set; }
+    }
 
-	class C2Error {
-		[JsonProperty ("title")]
-		public string Title { get; set; }
+    class C2Error
+    {
+        [JsonProperty("title")]
+        public string Title { get; set; }
 
-		[JsonProperty ("message")]
-		public string Message { get; set; }
-	}
+        [JsonProperty("message")]
+        public string Message { get; set; }
+    }
 }

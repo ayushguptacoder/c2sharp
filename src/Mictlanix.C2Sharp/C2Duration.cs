@@ -28,12 +28,14 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace Mictlanix.C2Sharp {
-	[JsonConverter (typeof (StringEnumConverter))]
-	public enum C2Duration {
-		[EnumMember (Value = "DAY")]
-		Day,
-		[EnumMember (Value = "GTC")]
-		GoodTilCanceled
-	}
+namespace Collective2
+{
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum C2Duration
+    {
+        [EnumMember(Value = "DAY")]
+        Day,
+        [EnumMember(Value = "GTC")]
+        GoodTilCanceled
+    }
 }

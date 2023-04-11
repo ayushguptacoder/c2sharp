@@ -26,128 +26,132 @@
 
 using System;
 using Newtonsoft.Json;
-using Mictlanix.C2Sharp.Converters;
+using Collective2.Converters;
 
-namespace Mictlanix.C2Sharp {
-	public class C2System {
-		[JsonProperty ("system_id")]
-		public string Id { get; set; }
+namespace Collective2
+{
+    public class C2System
+    {
+        [JsonProperty("system_id")]
+        public string Id { get; set; }
 
-		[JsonProperty ("systemName")]
-		public string Name { get; set; }
+        [JsonProperty("systemName")]
+        public string Name { get; set; }
 
-		[JsonProperty ("system_name")]
-		internal string SystemName {
-			get { return Name; }
-			set { Name = value; }
-		}
+        [JsonProperty("system_name")]
+        internal string SystemName
+        {
+            get { return Name; }
+            set { Name = value; }
+        }
 
-		[JsonProperty ("shortDescription")]
-		public string Summary { get; set; }
+        [JsonProperty("shortDescription")]
+        public string Summary { get; set; }
 
-		[JsonProperty ("longDescription")]
-		public string Description { get; set; }
+        [JsonProperty("longDescription")]
+        public string Description { get; set; }
 
-		[JsonProperty ("ownerpersonid")]
-		public string OwnerPersonId { get; set; }
+        [JsonProperty("ownerpersonid")]
+        public string OwnerPersonId { get; set; }
 
-		[JsonProperty ("owner_screenname")]
-		public string OwnerScreenname { get; set; }
+        [JsonProperty("owner_screenname")]
+        public string OwnerScreenname { get; set; }
 
-		[JsonProperty ("owner_email")]
-		public string OwnerEmail { get; set; }
+        [JsonProperty("owner_email")]
+        public string OwnerEmail { get; set; }
 
-		[JsonProperty ("owner_firstname")]
-		public string OwnerFirstname { get; set; }
+        [JsonProperty("owner_firstname")]
+        public string OwnerFirstname { get; set; }
 
-		[JsonProperty ("owner_lastname")]
-		public string OwnerLastname { get; set; }
+        [JsonProperty("owner_lastname")]
+        public string OwnerLastname { get; set; }
 
-		[JsonProperty ("createdWhen")]
-		public DateTime? CreatedWhen { get; set; }
+        [JsonProperty("createdWhen")]
+        public DateTime? CreatedWhen { get; set; }
 
-		[JsonProperty ("created_when")]
-		internal DateTime? CreatedWhen2 {
-			get { return CreatedWhen; }
-			set { CreatedWhen = value; }
-		}
+        [JsonProperty("created_when")]
+        internal DateTime? CreatedWhen2
+        {
+            get { return CreatedWhen; }
+            set { CreatedWhen = value; }
+        }
 
-		[JsonProperty ("test_system")]
-		[JsonConverter (typeof (BoolConverter))]
-		public bool? TestSystem { get; set; }
+        [JsonProperty("test_system")]
+        [JsonConverter(typeof(BoolConverter))]
+        public bool? TestSystem { get; set; }
 
-		[JsonProperty ("minimum_portfolio_size_required")]
-		public decimal MinimumPortfolioSizeRequired { get; set; }
+        [JsonProperty("minimum_portfolio_size_required")]
+        public decimal MinimumPortfolioSizeRequired { get; set; }
 
-		[JsonProperty ("freeTrialPeriodDays")]
-		public int FreeTrialPeriodDays { get; set; }
+        [JsonProperty("freeTrialPeriodDays")]
+        public int FreeTrialPeriodDays { get; set; }
 
-		[JsonProperty ("creditSystemTimeUntil_clock")]
-		public DateTime? CreditSystemTimeUntil { get; set; }
+        [JsonProperty("creditSystemTimeUntil_clock")]
+        public DateTime? CreditSystemTimeUntil { get; set; }
 
-		[JsonProperty ("creditSystemTimeUntil_epochSecs")]
-		public long? CreditSystemTimeUntilSeconds { get; set; }
+        [JsonProperty("creditSystemTimeUntil_epochSecs")]
+        public long? CreditSystemTimeUntilSeconds { get; set; }
 
-		[JsonProperty ("freeSignalEntryCredits")]
-		public int FreeSignalEntryCredits { get; set; }
+        [JsonProperty("freeSignalEntryCredits")]
+        public int FreeSignalEntryCredits { get; set; }
 
-		[JsonProperty ("equitycurve_startingcapital")]
-		public decimal StartingCapital { get; set; }
+        [JsonProperty("equitycurve_startingcapital")]
+        public decimal StartingCapital { get; set; }
 
-		[JsonProperty ("monthlyFee")]
-		public decimal MonthlyFee { get; set; }
+        [JsonProperty("monthlyFee")]
+        public decimal MonthlyFee { get; set; }
 
-		[JsonProperty ("trades_forex")]
-		[JsonConverter (typeof (BoolConverter))]
-		public bool? TradesForex { get; set; }
+        [JsonProperty("trades_forex")]
+        [JsonConverter(typeof(BoolConverter))]
+        public bool? TradesForex { get; set; }
 
-		[JsonProperty ("trades_futures")]
-		[JsonConverter (typeof (BoolConverter))]
-		public bool? TradesFutures { get; set; }
+        [JsonProperty("trades_futures")]
+        [JsonConverter(typeof(BoolConverter))]
+        public bool? TradesFutures { get; set; }
 
-		[JsonProperty ("trades_options")]
-		[JsonConverter (typeof (BoolConverter))]
-		public bool? TradesOptions { get; set; }
+        [JsonProperty("trades_options")]
+        [JsonConverter(typeof(BoolConverter))]
+        public bool? TradesOptions { get; set; }
 
-		[JsonProperty ("trades_stocks")]
-		[JsonConverter (typeof (BoolConverter))]
-		public bool? TradesStocks { get; set; }
+        [JsonProperty("trades_stocks")]
+        [JsonConverter(typeof(BoolConverter))]
+        public bool? TradesStocks { get; set; }
 
-		[JsonProperty ("trades_stocks_short")]
-		[JsonConverter (typeof (BoolConverter))]
-		public bool? TradesStocksShort { get; set; }
+        [JsonProperty("trades_stocks_short")]
+        [JsonConverter(typeof(BoolConverter))]
+        public bool? TradesStocksShort { get; set; }
 
-		[JsonProperty ("trades_options_short")]
-		[JsonConverter (typeof (BoolConverter))]
-		public bool? TradesOptionsShort { get; set; }
+        [JsonProperty("trades_options_short")]
+        [JsonConverter(typeof(BoolConverter))]
+        public bool? TradesOptionsShort { get; set; }
 
-		[JsonProperty ("shorts_options")]
-		public string ShortsOptions { get; set; }
+        [JsonProperty("shorts_options")]
+        public string ShortsOptions { get; set; }
 
-		[JsonProperty ("shorts_stocks")]
-		public string ShortsStocks { get; set; }
+        [JsonProperty("shorts_stocks")]
+        public string ShortsStocks { get; set; }
 
-		[JsonProperty ("isAlive")]
-		[JsonConverter (typeof (BoolConverter))]
-		public bool? IsAlive { get; set; }
+        [JsonProperty("isAlive")]
+        [JsonConverter(typeof(BoolConverter))]
+        public bool? IsAlive { get; set; }
 
-		[JsonProperty ("recently_inactive_since")]
-		public string RecentlyInactiveSince { get; set; }
+        [JsonProperty("recently_inactive_since")]
+        public string RecentlyInactiveSince { get; set; }
 
-		[JsonProperty ("trades_own_system_certified")]
-		[JsonConverter (typeof (BoolConverter))]
-		public bool? TradesOwnSystemCertified { get; set; }
+        [JsonProperty("trades_own_system_certified")]
+        [JsonConverter(typeof(BoolConverter))]
+        public bool? TradesOwnSystemCertified { get; set; }
 
-		[JsonProperty ("trades_own_system_scaling")]
-		public decimal? TradesOwnSystemScaling { get; set; }
+        [JsonProperty("trades_own_system_scaling")]
+        public decimal? TradesOwnSystemScaling { get; set; }
 
-		[JsonProperty ("trades_own_system_percent_followed")]
-		public decimal? TradesOwnSystemPercentFollowed { get; set; }
+        [JsonProperty("trades_own_system_percent_followed")]
+        public decimal? TradesOwnSystemPercentFollowed { get; set; }
 
-		[JsonProperty ("trades_own_system_number_signals")]
-		public int? TradesOwnSystemNumberSignals { get; set; }
+        [JsonProperty("trades_own_system_number_signals")]
+        public int? TradesOwnSystemNumberSignals { get; set; }
 
-		[JsonProperty ("statistics")]
-		public C2Statistics Statistics { get; set; }
-	}
+        [JsonProperty("statistics")]
+        public C2Statistics Statistics { get; set; }
+    }
 }
